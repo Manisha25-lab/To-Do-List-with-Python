@@ -1,0 +1,50 @@
+# Define an empty to-do list
+task = []
+
+# Function to add a task
+def add_task(task):
+    task.append(task)
+    print(f"Task '{task}' added to the to-do list.")
+
+ #Function to mark a task as completed
+def complete_task(task):
+     if task in task:
+        tasks.remove(task)
+        print(f"Task '{task}' not found in the to-do list.")
+#Function to view the to-do list
+def view_task():      
+    if task:
+        print("To-Do List: ")
+        for task in tasks:
+            print(f"- {task}")
+    else:
+        print("Your to-do list is empty.")
+#Function to delete a task
+def delete_task(task):
+        if task in task:
+            task.remove(task) 
+            print(f"Tas '{task}' deleted from the to-do list.")
+#Main program loop
+while True:
+    print("\noptions:")
+    print("1. Add Task")
+    print("2. Complete Task")
+    print("3. View Tasks")
+    print("4. Delete Task")
+    print("5.Quit")
+    Choice = input("Enter your choice: ")
+    if choice =='1':
+        task = input("Enter your choice: ")
+        add_task(task)
+    elif choice == '2' :
+        task = input("Enter the task to mark as completed: ")
+        complete_task(task)
+    elif choice =='3':
+        view_task()
+    elif choice == '4':
+        task = input("Enter the task to delete: ")
+        delete_task(task)
+    elif choice == '5':
+        break
+    else:
+        print("Invalid choice. Please try again.")            
